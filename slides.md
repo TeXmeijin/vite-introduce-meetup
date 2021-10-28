@@ -160,6 +160,13 @@ layout: image-right
 image: https://raw.githubusercontent.com/lightvue/slidev-theme-light-icons/master/static/light-icons-illustration.svg
 ---
 
+# 〜ファイル更新時の反映の速さを体感する時間〜
+
+---
+layout: image-right
+image: https://raw.githubusercontent.com/lightvue/slidev-theme-light-icons/master/static/light-icons-illustration.svg
+---
+
 # index.html
 
 - SPAなのでHTMLはindex.htmlのみ
@@ -246,6 +253,128 @@ export default defineConfig({
   plugins: [react()]
 })
 ```
+
+---
+layout: image-right
+image: https://raw.githubusercontent.com/lightvue/slidev-theme-light-icons/master/static/light-icons-illustration.svg
+---
+
+# plugin (2)
+
+たとえばSentryの場合
+
+```ts
+import viteSentry from 'vite-plugin-sentry';
+
+export default defineConfig(({ mode }) => {
+  return {
+    plugins: [react(), viteSentry(getSentryConfig(mode))],
+```
+
+- mode(後述)を受け取れる関数として定義するとmodeごとに違うSentry設定を反映できる
+
+---
+layout: image-right
+image: https://raw.githubusercontent.com/lightvue/slidev-theme-light-icons/master/static/light-icons-illustration.svg
+---
+
+# plugin (3)
+
+- 本番ビルドのVisualize方法気になりますよね？
+- 設定は以下の記事がおすすめ（手前味噌
+
+https://zenn.dev/meijin/articles/vite-bundle-analyzer
+
+![スクリーンショット 2021-10-28 18 48 47](https://user-images.githubusercontent.com/7464929/139232101-c4f15c0f-7151-4355-acfb-e0e00c25e653.png)
+
+---
+layout: image-right
+image: https://raw.githubusercontent.com/lightvue/slidev-theme-light-icons/master/static/light-icons-illustration.svg
+---
+
+# CSS Modules
+
+- デフォルトでCSS Modulesに対応してます(すごい)
+- https://vitejs.dev/guide/features.html#css-modules
+- `.scss`ももちろん対応できます
+
+```shell
+yarn add -D sass
+```
+
+たとえば↓
+
+```tsx
+import { ReactNode } from 'react';
+import styles from './ErrorText.module.scss';
+
+export const ErrorText = ({ children }: { children: ReactNode }) => <span className={styles.text}>{children}</span>;
+```
+
+---
+layout: image-right
+image: https://raw.githubusercontent.com/lightvue/slidev-theme-light-icons/master/static/light-icons-illustration.svg
+---
+
+# env variables
+
+- みんな気になる環境変数
+- https://vitejs.dev/guide/env-and-mode.html
+
+```conf
+VITE_FIREBASE_APIKEY=hogehogehogehogehogehoge
+```
+
+- `VITE_`から始まる変数だけクライアント側に放出される
+- `import.meta.env.HOGE`でアクセスできるが、型安全でないため、`env.d.ts`といったファイルを定義してstringにしておく
+
+---
+layout: image-right
+image: https://raw.githubusercontent.com/lightvue/slidev-theme-light-icons/master/static/light-icons-illustration.svg
+---
+
+# modes
+
+- `vite build`でProduction Buildができるけど、検証環境と本番環境で環境変数などを切り分けたいケースはある
+- `vite build --mode staging`といった`mode`引数が指定できる。便利。CIもこれで組める
+- `.env.[mode]`のファイル名の環境変数を読み込んでくれる
+- `vite.config.ts`で指定するconfigを関数にできるのでその引数にmodeが含まれる
+
+```ts
+// https://vitejs.dev/config/
+export default defineConfig(({ mode }) => {
+  return {
+```
+
+---
+layout: image-right
+image: https://raw.githubusercontent.com/lightvue/slidev-theme-light-icons/master/static/light-icons-illustration.svg
+---
+
+# まとめ
+
+- だいたいこれで実装するときに必要な知識は網羅できた...？
+- 個人的に良いなと思っているところ
+  - とにかくHMRの反映が速い
+  - シンプルかつ拡張可能な仕組み
+  - 本番ビルドはrollupなので安定してる
+    - https://vitejs.dev/guide/why.html#why-bundle-for-production
+
+---
+layout: image-right
+image: https://raw.githubusercontent.com/lightvue/slidev-theme-light-icons/master/static/light-icons-illustration.svg
+---
+
+# 自由時間
+
+## ・感想など雑談
+
+<br />
+<br />
+
+
+## ・プラスアルファ
+デプロイ、Storybook、プラグイン探しなどなど
 
 ---
 
