@@ -392,17 +392,17 @@ layout: center-image
 </p>
 
 <div className="flex w-full gap-3">
-  <div className="flex-1 p-4 rounded-md border-2 border-[#07389866]">
+  <div className="flex-1 p-4 rounded-md bg-[#A3CFCF44]">
     <h2 className="font-bold">先生を直接指名できない</h2>
     <p className="text-xs mt-2">多くの家庭教師サービスは、先生ではなく「運営会社に資料請求」するので希望した先生にならないこともあります。<br />マナリンクでは一人ひとりの先生のプロフィールページを用意し、<b>YouTube上に自己紹介動画も公開</b>しています。もちろん直接指名できます。</p>
     <img className="mt-4 mx-auto w-[200px]" src="https://manalink.jp/_ipx/f_webp,s_400x246/img/components/top/feature02.jpg" />
   </div>
-  <div className="flex-1 p-4 rounded-md border-2 border-[#07389866]">
+  <div className="flex-1 p-4 rounded-md bg-[#A3CFCF44]">
     <h2 className="font-bold">保護者から指導が見えない</h2>
     <p className="text-xs mt-2">教育サービスの大きな課題は<b>価値を受ける人（生徒）と対価を支払う人（親）が別人</b>なことです。<br />マナリンクでは専用のReact Native製アプリで先生-生徒間の指導を実施していただき、保護者さんに閲覧権限を与えることで指導内容を可視化、解約を防ぎます。</p>
     <img className="mt-4 mx-auto w-[160px]" src="https://prtimes.jp/i/40725/16/resize/d40725-16-eb211c51287f6ba5bd44-0.png" />
   </div>
-  <div className="flex-1 p-4 rounded-md border-2 border-[#07389866]">
+  <div className="flex-1 p-4 rounded-md bg-[#A3CFCF44]">
     <h2 className="font-bold">職業自体の認知度が低い</h2>
     <p className="text-xs mt-2">オンライン家庭教師自体はここ数年でZoom等の普及によって生まれた新しい職業です。<br />そのため、単に先生を募集するのではなく、オンライン家庭教師という仕事についてマナリンクから発信するために、マナリンクTeachersというメディアを公開・運営しています。</p>
     <img className="mt-4 mx-auto w-[240px]" src="https://user-images.githubusercontent.com/7464929/139240626-0b2408e8-95a0-4563-a4aa-6637862029d0.png" />
