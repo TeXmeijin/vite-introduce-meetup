@@ -176,7 +176,7 @@ image: https://raw.githubusercontent.com/lightvue/slidev-theme-light-icons/maste
   - tscはCIやIDEが別途実行してくれるよねっていう考え
 - `npx esbuild src/App.tsx`
   - 爆速でJavaScriptへの変換が終わる
-  - むしろ型情報を落とすことだけをesbuildがやっている
+  - むしろ型情報(+JSX)を落とすことだけをesbuildがやっている
     - https://github.com/evanw/esbuild/blob/master/internal/js_lexer/js_lexer.go
 
 ---
