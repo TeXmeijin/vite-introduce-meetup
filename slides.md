@@ -326,7 +326,7 @@ VITE_FIREBASE_APIKEY=hogehogehogehogehogehoge
 ```
 
 - `VITE_`から始まる変数だけクライアント側に放出される
-- `import.meta.env.HOGE`でアクセスできるが、型安全でないため、`env.d.ts`といったファイルを定義してstringにしておく
+- import.meta.env.HOGEでアクセスできるが、型安全でないため、`env.d.ts`といったファイルを定義してstringにしておく
 
 ---
 layout: image-right
