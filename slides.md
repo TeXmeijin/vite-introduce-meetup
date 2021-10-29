@@ -39,6 +39,8 @@ image: 'https://vitejs.dev/logo.svg'
 
 2021/10/30(Sat) 10:00〜 / 主催: [@Meijin_garden](https://twitter.com/Meijin_garden)
 
+<span class="text-[#969696]">https://connpass.com/event/227990/</span>
+
 ---
 layout: image-right
 image: https://raw.githubusercontent.com/lightvue/slidev-theme-light-icons/master/static/light-icons-cover.svg
@@ -321,12 +323,12 @@ image: https://raw.githubusercontent.com/lightvue/slidev-theme-light-icons/maste
 - みんな気になる環境変数
 - https://vitejs.dev/guide/env-and-mode.html
 
-```conf
+```shell
 VITE_FIREBASE_APIKEY=hogehogehogehogehogehoge
 ```
 
 - `VITE_`から始まる変数だけクライアント側に放出される
-- import.meta.env.HOGEでアクセスできるが、型安全でないため、`env.d.ts`といったファイルを定義してstringにしておく
+- 環境変数へのアクセスはデフォでは型安全でないが、`env.d.ts`といったファイルを定義してstringにしておくとよい
 
 ---
 layout: image-right
