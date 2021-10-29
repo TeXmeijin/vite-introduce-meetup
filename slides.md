@@ -169,6 +169,21 @@ layout: image-right
 image: https://raw.githubusercontent.com/lightvue/slidev-theme-light-icons/master/static/light-icons-illustration.svg
 ---
 
+# vite devは型チェックしません
+
+- https://vitejs.dev/guide/features.html#typescript
+  - Vite only performs transpilation on .ts files and does <b>NOT</b> perform type checking.
+  - tscはCIやIDEが別途実行してくれるよねっていう考え
+- `npx esbuild src/App.tsx`
+  - 爆速でJavaScriptへの変換が終わる
+  - むしろ型情報を落とすことだけをesbuildがやっている
+    - https://github.com/evanw/esbuild/blob/master/internal/js_lexer/js_lexer.go
+
+---
+layout: image-right
+image: https://raw.githubusercontent.com/lightvue/slidev-theme-light-icons/master/static/light-icons-illustration.svg
+---
+
 # index.html
 
 - SPAなのでHTMLはindex.htmlのみ
